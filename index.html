@@ -29,15 +29,6 @@
     <script src="lib/js/head.min.js"></script>
     
 
-    <!-- If the query includes 'print-pdf', use the PDF print sheet -->
-    <!--<script>
-      document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
-    </script>-->
-
-    <!--[if lt IE 9]>
-    <script src="lib/js/html5shiv.js"></script>
-    <![endif]-->
-
     <!-- Custom Elements -->
     <!-- Include any js libraries that our elements use -->
     <script src="./lib/js/chart.min.js"></script>
@@ -78,21 +69,8 @@
           </aside>
         </section>
 
-        <section class="left-align">
-          <h3>
-            This presentation contains <strong>native Web Components</strong> and <br>will
-            only display properly in <br><a href="https://www.google.com/intl/en/chrome/browser/canary.html">Chrome Canary.</a>
-          </h3>
-          <p>Be sure to enable the following in <code>chrome://flags</code></p>
-          <hr>
-          <p><i class="icon-ok supported"></i> Experimental Web Platform features</p>
-          <p><i class="icon-ok supported"></i> Experimental JavaScript</p>
-          <p><i class="icon-ok supported"></i> HTML Imports</p>
-
-        </section>
-
         <section>
-          <h2 class="left-align voice voice-human" style="font-size: 90px;">Within this talk...</h2>
+          <h2 class="left-align voice voice-human" style="font-size: 90px;">Within this course...</h2>
           <hr>
           <h3 class="left-align voice voice-human" style="font-size: 70px;">Web Components?</h3>
           <h3 class="left-align voice voice-human" style="font-size: 70px;">The Specs</h3>
@@ -289,6 +267,7 @@
           </aside>
         </section>
 
+
         <section id="chart-demo" style="height: 200px;">
           <code style="font-size: 50px;">&lt;chart-pie&gt;&lt;/chart-pie&gt;</code>
           <div class="fragment" data-pie="true"></div>
@@ -296,6 +275,7 @@
             <p>Imagine you're building a data viz library</p>
           </aside>
         </section>
+
 
         <section class="left-align">
           <div style="display: inline-block; margin-right: 100px;">
@@ -314,6 +294,7 @@
           </mark-down>
         </section>
 
+
         <section class="left-align">
           <h1 style="font-size: 3em;">Web <br>Components <i class="icon-umbrella"></i></h1>
           <aside class="notes">
@@ -321,6 +302,7 @@
             <p>And we're going to go through each of them</p>
           </aside>
         </section>
+
 
         <section>
           <div class="spec-list">
@@ -340,6 +322,7 @@
           </aside>
         </section>
 
+
         <section>
           <div style="display: inline-block;" class="left-align">
             <h2>Templates +</h2>
@@ -350,7 +333,62 @@
             <h3 class="voice voice-human"><em>Imports get everything on the page</em></h3>
           </div>
         </section>
-        
+
+
+        <section>
+          <h3>{ support table goes here }</h3>
+        </section>
+
+
+        <section>
+          <h1>Polymer!</h1>
+        </section>
+
+
+        <section class="left-align">
+          <h2>A collection of <strong>polyfills</strong> which lets us use Web Components in <strong>all modern browsers.</strong></h2>
+          <aside class="notes">
+            IE 10+
+            Safari 6+
+          </aside>
+        </section>
+
+
+        <section>
+          <h3>{ support table goes here }</h3>
+        </section>
+
+
+        <section class="left-align">
+          <h2><em>Also</em> a <strong>framework</strong> for building applications with <strong>web components.</strong></h2>
+        </section>
+
+
+        <section class="left-align">
+          <h3>Polymer Extras</h3>
+          <hr>
+          <h3><i class="icon-ok-circle supported"></i> Web Animations</h3>
+          <h3><i class="icon-ok-circle supported"></i> Pointer Events</h3>
+          <h3><i class="icon-ok-circle supported"></i> Template Binding</h3>
+          <h3><i class="icon-ok-circle supported"></i> Node.bind()</h3>
+          <h3><i class="icon-ok-circle supported"></i> Model-driven Views (MDV)</h3>
+        </section>
+
+
+        <section>
+          <div class="spec-list">
+            <h2 class="spec-name">Templates</h2>
+            <h3 class="voice voice-human spec-definition"><em>Scaffolding</em></h3>
+            <h2 class="spec-name">Shadow DOM</h2>
+            <h3 class="voice voice-human spec-definition"><em>Encapsulation</em></h3>
+            <h2 class="spec-name">Custom Elements</h2>
+            <h3 class="voice voice-human spec-definition"><em>Extensions</em></h3>
+            <h2 class="spec-name">Imports</h2>
+            <h3 class="voice voice-human spec-definition"><em>Packaging</em></h3>
+          </div>
+        </section>
+
+
         <section>
           <h1>Templates</h1>
         </section>
@@ -372,11 +410,6 @@
   &lt;/script&gt;</span>
 <span class="fragment burn" data-fragment-index="1">&lt;/template&gt;</span>
 </code></pre>
-        </section>
-
-        <section>
-          <h3>The Content Keyword</h3>
-          <img class="chromeless" src="./img/template-content.png">
         </section>
 
         <section class="demo" id="demo-templates">
@@ -407,24 +440,8 @@
           </template>
         </section>
 
-        <section style="text-align: left;">
-          <h2>Gotchas</h2>
-          <hr>
-          <h3 class="fragment" data-fragment-index="1">No Built-In Data Interpolation</h3>
-          <p class="fragment" data-fragment-index="1"><em>{{ }} tags don't do anything...yet</em></p>
-          <br>
-          <h3 class="fragment" data-fragment-index="2" style="line-height: 1;">Nested Templates Are Not Automatically Activated</h3>
-          <p class="fragment" data-fragment-index="2"><em>You'll have to append each separately</em></p>
-        </section>
-
-        <section class="left-align">
-          <h2>Browser Support</h2>
-          <hr>
-          <h3><i class="icon-ok-circle supported"></i> Chrome / Mobile Chrome</h3>
-          <h3><i class="icon-ok-circle supported"></i> Firefox</h3>
-          <h3><i class="icon-remove-circle not-supported"></i> Internet Explorer</h3>
-          <h3><i class="icon-remove-circle not-supported"></i> Safari / Mobile Safari</h3>
-          <h3><i class="icon-ok-circle supported"></i> Opera / Opera Mini</h3>
+        <section>
+          <h1>DEMO!</h1>
         </section>
 
         <section>
@@ -440,8 +457,7 @@
           </div>
         </section>
 
-        <section data-state="blackout" data-background="./img/finn.gif">
-          <!-- <img class="chromeless" width="100%" src="./img/finn.gif"> -->
+        <section data-state="blackout">
           <h1 style="color: #FFF; font-weight: bold;">Shadow DOM</h1>
         </section>
         
@@ -493,459 +509,6 @@
           </div>
         </section>
 
-        <section>
-          <h3 class="voice voice-human normal-letters"><code>element.createShadowRoot()</code></h3>
-        </section>
-
-        <section class="demo">
-          <h3>Our first shadow dom</h3>
-          <div class="demo-code">
-<pre style="font-size: 28px;"><code data-trim data-noescape contenteditable style="margin-top: 20px;">
-<span class="fragment burn" data-fragment-index="1">&lt;div class="widget"&gt;Hello, world!&lt;/div&gt;</span><span class="fragment burn" data-fragment-index="2">
-&lt;script&gt;
-  var host = document.querySelector(".widget");
-  var root = host.createShadowRoot();
-  root.innerHTML = "&lt;em&gt;I'm inside yr div!&lt;/em&gt;";
-&lt;/script&gt;
-</span>
-</code></pre>
-            <button class="demo-btn" onclick="demos.shadowRoot();">Run</button>
-          </div>
-
-          <div class="widget expand">Hello, world!</div>
-
-          <p class="fragment" data-fragment-index="3">Only <strong>descendants of the Shadow Root</strong> will be rendered.</p>
-
-          <aside class="notes">
-            Inspect with dev tools
-          </aside>
-        </section>
-
-        <section id="demo-style-encapsulation" class="demo">
-          <h3>Style Encapsulation</h3>
-          
-          <div class="demo-code">
-            <div class="ribbon-container">
-              <pre style="font-size: 24px;"><code data-trim data-noescape contenteditable style="margin-top: 20px;">
-<span class="fragment burn" data-fragment-index="1">&lt;template&gt;</span>
-  <span class="fragment burn" data-fragment-index="2">&lt;style&gt;
-    h3 { color: white; background: tomato; }
-  &lt;/style&gt;</span>
-  <span class="fragment burn" data-fragment-index="3">&lt;h3&gt;A Shadow H3 Header&lt;/h3&gt;</span>
-<span class="fragment burn" data-fragment-index="1">&lt;/template&gt;</span>
-              </code></pre>
-              <div class="ribbon-wrapper-blue">
-                <div class="ribbon-blue">Shadow</div>
-              </div>
-            </div>
-
-            <pre style="font-size: 24px;"><code data-trim data-noescape contenteditable style="margin-top: 20px;">
-<span class="fragment burn" data-fragment-index="4">&lt;script&gt;
-  var tmpl = document.querySelector("template");
-  var host = document.querySelector(".widget");
-  var root = host.createShadowRoot();
-  root.appendChild(tmpl.content.cloneNode(true));
-&lt;/script&gt;</span>
-            </code></pre>
-          </div>
-
-          <template>
-            <style>
-              h3 {
-                color: white;
-                background: tomato;
-              }
-            </style>
-            <h3>A Shadow H3 Header</h3>
-          </template>
-
-          <div>
-            <h3>An H3 Header</h3>
-            <div class="widget"></div>
-          </div>
-        </section>
-
-
-        <section id="demo-applyAuthorStyles" class="left-align demo">
-          <p><strong><code>applyAuthorStyles</code></strong> (default: <code>false</code>)</p>
-          <p><code>false</code>: Author styles <strong>will not</strong> affect your component.</p>
-          <p><code>true</code>: Author styles <strong>will</strong> affect your component.</p>
-          <br>
-          <div>
-
-            <template>
-              <style>
-                h3 {
-                  color: white;
-                  background: tomato;
-                }
-              </style>
-              <h3>A Shadow H3 Header</h3>
-            </template>
-
-            <div class="center-align">
-              <h3>An H3 Header</h3>
-              <div class="widget"></div>
-            </div>
-
-            <div class="wrap">
-              <button class="demo-btn right" onclick="demos.applyAuthorStyles();">Toggle</button>
-              <code>root.applyAuthorStyles: <span id="isAuthorStyles"></span></code>
-            </div>
-            
-          </div>
-          <aside class="notes">
-            <p>
-              These are good for broad changes but you probably also want
-              to be able to expose specific elements for the user to style
-            </p>
-          </aside>
-        </section>
-
-
-        <section id="demo-resetStyleInheritance" class="left-align demo">
-          <p><strong><code>resetStyleInheritance</code></strong> (default: <code>false</code>)</p>
-          <p><code>false</code>: Inheritable styles <strong>will</strong> affect your component.</p>
-          <p><code>true</code>: Inheritable styles <strong>will not</strong> affect your component.</p>
-          <br>
-          <div>
-
-            <template>
-              <style>
-                h3 {
-                  color: white;
-                  background: tomato;
-                }
-              </style>
-              <h3>A Shadow H3 Header</h3>
-            </template>
-
-            <div class="center-align">
-              <h3>An H3 Header</h3>
-              <div class="widget"></div>
-            </div>
-
-            <div class="wrap">
-              <button class="demo-btn right" onclick="demos.resetStyleInheritance();">Toggle</button>
-              <code>root.resetStyleInheritance: <span id="isStyleInheritance"></span></code>
-            </div>
-
-          </div>
-        </section>
-
-        <section class="left-align">
-          <h3>You can <strong>poke holes</strong> in the <br>shadow boundary with the <br><strong>part</strong> attribute.</h3>
-        </section>
-
-        <section id="demo-parts" class="demo" style="height: 600px;">
-          <h3>Styling Parts</h3>
-          <div class="demo-code">
-            <div class="ribbon-container">
-              <pre style="font-size: 25px;"><code data-trim contenteditable style="margin-top: 20px;">
-&lt;template&gt;
-  &lt;h3 part="heading"&gt;Interesting Article&lt;/h3&gt;
-  &lt;p part="article"&gt;Article copy is special!&lt;/p&gt;
-&lt;/template&gt;
-              </code></pre>
-              <div class="ribbon-wrapper-blue">
-                <div class="ribbon-blue">Shadow</div>
-              </div>
-            </div>
-
-            <pre style="font-size: 25px;"><code data-trim contenteditable style="margin-top: 20px;">
-&lt;style&gt;
-  .widget::part(heading) { font-family: Courier; }
-  .widget::part(article) { font-style: italic; }
-&lt;/style&gt;
-            </code></pre>
-            <aside class="notes">
-              <p>part attribute and part pseudo selector</p>
-
-              <p>previously called "pseudo"</p>
-
-              <p>kind of like getters for CSS</p>
-            </aside>
-          </div>
-
-          <style>
-            .widget::part(heading) { font-family: Courier; }
-            .widget::part(article) { font-style: italic; }
-          </style>
-
-          <template>
-            <h3 part="heading">Interesting Article</h3>
-            <p part="article">Article copy is special!</p>
-          </template>
-
-          <div class="widget"></div>
-        </section>
-
-        <section id="demo-host" class="demo">
-          <h3>Styling :host</h3>
-          <div class="demo-code">
-            <div class="ribbon-container">
-              <pre style="font-size: 30px;"><code data-trim contenteditable style="margin-top: 20px;">
-&lt;template&gt;
-  &lt;style&gt;
-    :host {
-      border: 5px solid red;
-    }
-  &lt;/style&gt;
-  &lt;h2&gt;Oh hai!&lt;/h2&gt;
-&lt;/template&gt;
-              </code></pre>
-              <div class="ribbon-wrapper-blue">
-                <div class="ribbon-blue">Shadow</div>
-              </div>
-            </div>
-          </div>
-
-          <template>
-            <style>
-              :host {
-                /*
-                  We have to use important because Reveal.js
-                  has a higher specificity on the :host
-                 */
-                border: 5px solid red !important; 
-              }
-            </style>
-            <h2>Oh hai!</h2>
-          </template>
-
-          <div class="widget-borderless"></div>
-        </section>
-
-
-        <section id="demo-theming" class="demo">
-          <h3>Theming</h3>
-          <div class="demo-code">
-            <div class="ribbon-container">
-              <pre style="font-size: 30px;"><code data-trim contenteditable style="margin-top: 20px;">
-&lt;template&gt;
-  &lt;style&gt;
-    :host(.skinny) h2 {
-      font-family: 'Open Sans Condensed';
-      letter-spacing: -0.09em;
-    }
-  &lt;/style&gt;
-  &lt;h2&gt;Oh hai!&lt;/h2&gt;
-&lt;/template&gt;
-              </code></pre>
-              <div class="ribbon-wrapper-blue">
-                <div class="ribbon-blue">Shadow</div>
-              </div>
-            </div>
-          </div>
-
-          <template>
-            <style>
-              :host(.skinny) h2 {
-                /*
-                  We have to use important because Reveal.js
-                  has a higher specificity on the :host
-                 */
-                font-family: 'Open Sans Condensed' !important;
-                letter-spacing: -0.09em;
-              }
-            </style>
-            <h2>All jammed up</h2>
-          </template>
-
-          <div class="skinny">
-            <div class="widget"></div>
-          </div>
-        </section>
-
-
-        <section id="demo-custom-props" class="demo">
-          <h3>Custom Properties</h3>
-          <div class="demo-code">
-            <div class="ribbon-container">
-              <pre style="font-size: 25px;"><code data-trim contenteditable style="margin-top: 20px;">
-&lt;template&gt;
-  &lt;style&gt;
-    h2 {
-      font-family: var(header-font);
-    }
-  &lt;/style&gt;
-  &lt;h2&gt;Custom prop stylin'&lt;/h2&gt;
-&lt;/template&gt;
-              </code></pre>
-              <div class="ribbon-wrapper-blue">
-                <div class="ribbon-blue">Shadow</div>
-              </div>
-            </div>
-
-            <pre style="font-size: 25px;"><code data-trim contenteditable style="margin-top: 20px;">
-&lt;style&gt;
-  body {
-    var-header-font: Courier;
-  }
-&lt;/style&gt;
-            </code></pre>
-          </div>
-
-          <template>
-            <style>
-              h2 {
-                font-family: var(header-font);
-              }
-            </style>
-            <h2>Custom prop stylin'</h2>
-          </template>
-
-          <div class="widget"></div>
-        </section>
-
-        <section class="left-align">
-          <h3><strong>Insertion points</strong> invite content from the host element into the Shadow DOM.</h3>
-
-          <h3>Use the <strong>&lt;content&gt; tag</strong> to create an insertion point.</h3>
-        </section>
-
-
-        <section id="demo-insertion-points" class="demo">
-          <h3>Insertion Points</h3>
-          <div class="demo-code">
-            <div class="ribbon-container">
-              <pre style="font-size: 28px;"><code data-trim contenteditable style="margin-top: 20px;">
-&lt;template&gt;
-  &lt;h2&gt;A Wild &lt;content&gt;&lt;/content&gt; Appeared!&lt;/h2&gt;
-&lt;/template&gt;
-              </code></pre>
-              <div class="ribbon-wrapper-blue">
-                <div class="ribbon-blue">Shadow</div>
-              </div>
-            </div>
-
-            <pre style="font-size: 28px;"><code data-trim contenteditable style="margin-top: 20px;">
-&lt;div class="widget"&gt;
-  Jigglypuff
-&lt;/div&gt;
-            </code></pre>
-          </div>
-
-          <div class="widget">
-            <div class="hidden pokemon">
-              Jigglypuff
-            </div>
-          </div>
-
-          <template>
-            <h2>A Wild <content></content> Appeared!</h2>
-          </template>
-
-          <img class="jigglypuff chromeless" src="./img/jigglypuff.png">
-
-          <aside class="notes">
-            A single content tag is kind of like a catch-all
-          </aside>
-        </section>
-
-        <section class="left-align">
-          <h3>Specific content can be targeted with the <strong>select</strong> attribute. </h3>
-        </section>
-
-        <section id="demo-select" class="demo">
-          <h3>Select</h3>
-          <div class="ribbon-container">
-            <pre style="font-size: 24px;"><code data-trim contenteditable style="margin-top: 20px;">
-&lt;h3&gt;Last Name: &lt;content select=".last-name"&gt;&lt;/content&gt;&lt;/h3&gt;
-&lt;h3&gt;First Name: &lt;content select=".first-name"&gt;&lt;/content&gt;&lt;/h3&gt;
-&lt;h3&gt;&lt;content select=""&gt;&lt;/content&gt;&lt;/h3&gt;
-            </code></pre>
-            <div class="ribbon-wrapper-blue">
-              <div class="ribbon-blue">Shadow</div>
-            </div>
-          </div>
-
-          <pre style="font-size: 24px;"><code data-trim contenteditable style="margin-top: 20px;">
-&lt;div class="widget"&gt;
-  Hello World
-  &lt;span class="first-name"&gt;Rob&lt;/span&gt;
-  &lt;span class="last-name"&gt;Dodson&lt;/span&gt;
-&lt;/div&gt;
-          </code></pre>
-
-          <template>
-            <style>h3 { margin: 0 0 10px; text-align: left; }</style>
-            <h3>Last Name: <content select=".last-name"></content></h3>
-            <h3>First Name: <content select=".first-name"></content></h3>
-            <h3><content select=""></content></h3>
-          </template>
-
-          <div class="widget expand">
-            Hello
-            <span class="first-name">Rob</span>
-            <span class="last-name">Dodson</span>
-            World
-          </div>
-        </section>
-
-        <section>
-          <a href="http://html5-demos.appspot.com/static/shadowdom-visualizer/index.html"><img src="./img/shadow-dom-viz.png"></a>
-        </section>
-
-        <section>
-          <h2>What About JavaScript?</h2>
-        </section>
-
-        <section class="left-align">
-          <h2>There is no special encapsulation but <strong>events are retargeted</strong> to the Shadow Host.</h2>
-        </section>
-
-        <!-- <section id="demo-retargeted-events" class="demo">
-          <h3>Events are retargeted</h3>
-
-          <pre><code data-trim contenteditable style="margin-top: 20px;">
-// Regular DOM
-&lt;input id="normal-text" value="I'm normal text"&gt;
-          </code></pre>
-
-          <pre><code data-trim contenteditable style="margin-top: 20px;">
-// Shadow Host
-&lt;div id="host"&gt;
-  &lt;input id="distributed-text" value="I'm distributed text"&gt;
-&lt;/div&gt;
-          </code></pre>
-
-          <pre><code data-trim contenteditable style="margin-top: 20px;">
-// Shadow DOM
-&lt;content&gt;&lt;/content&gt;
-&lt;input id="shadow-text" value="I'm shadow text"&gt;
-          </code></pre>
-          
-          <div class="clickable">
-            <input id="normal-text" type="text" value="I'm normal text">
-            
-            <template>
-              <div>
-                <content></content>
-              </div>
-              <div>
-                <input id="shadow-text" type="text" value="I'm shadow text">
-              </div>
-            </template>
-
-            <div class="widget expand">
-              <div id="host">
-                <input id="distributed-text" type="text" value="I'm distributed text">
-              </div>
-            </div>
-          </div>
-
-        </section> -->
-
-        <section class="left-align">
-          <h2>Browser Support</h2>
-          <hr>
-          <h3><i class="icon-ok-circle supported"></i> Chrome / Mobile Chrome</h3>
-          <h3><i class="icon-remove-circle not-supported"></i> Firefox <em>(In Development)</em></h3>
-          <h3><i class="icon-remove-circle not-supported"></i> Internet Explorer</h3>
-          <h3><i class="icon-remove-circle not-supported"></i> Safari / Mobile Safari</h3>
-          <h3><i class="icon-ok-circle supported"></i> Opera / Opera Mini</h3>
-        </section>
 
         <section>
           <div class="spec-list">
@@ -959,6 +522,7 @@
             <h3 class="spec-definition faded"><em>Packaging</em></h3>
           </div>
         </section>
+
 
         <section>
           <h1>Custom Elements</h1>
@@ -980,53 +544,31 @@
         </section>
 
 
-        <section>
-          <p style="text-align: left; font-size: 50px; margin-top: 10%;"><code>document.register('tag-name', {<br>
-            &nbsp;&nbsp;prototype: proto<br>
-          })</code></p>
-          <br>
-          
-          <h3 class="left-align voice voice-human fragment">
-            <i class="icon-ok supported"></i> Tag name <strong>must</strong> have a dash
-          </h3>
-          
-          <h3 class="left-align voice voice-human fragment">
-            <i class="icon-ok supported"></i> Proto must inherit from <strong>HTMLElement</strong>
-          </h3>
-        </section>
-
-
-        <!-- <section>
-          <p style="text-align: left; font-size: 50px; margin-top: 10%;"><code>document.register('chart-pie', {<br>
-            &nbsp;&nbsp;prototype: ChartPieProto<br>
-          })</code></p>
-          <br>
-          <h3 class="left-align voice voice-human fragment">
-            <code>&lt;chart-pie&gt;&lt;/chart-pie&gt;</code>
-          </h3>
-          
-          <h3 class="left-align voice voice-human fragment">
-            <code>document.createElement('chart-pie');</code>
-          </h3>
-        </section> -->
-
-
         <section class="demo">
-          <h3>Creating a Custom Element</h3>
-          <pre class="full-bleed"><code data-trim data-noescape contenteditable style="margin-top: 20px;">
-<span class="fragment burn">var tmpl = document.querySelector("#some-template");</span>
-
-<span class="fragment burn">var WidgetProto = Object.create(HTMLElement.prototype);</span>
-
-<span class="fragment burn">WidgetProto.createdCallback = function() {
-  var root = this.createShadowRoot();
-  root.appendChild(tmpl.content.cloneNode(true));
-};</span>
-
-<span class="fragment burn">var Widget = document.register("my-widget", {
-  prototype: WidgetProto
-});</span>
+          <h3>Custom Element + Polymer</h3>
+          <pre style="font-size: 27px;"><code data-trim data-noescape contenteditable style="margin-top: 20px;">
+<span class="fragment burn" data-fragment-index="1">&lt;script src="polymer.js"&gt;&lt;/script&gt;</span>
           </code></pre>
+
+          <pre style="font-size: 27px;"><code data-trim data-noescape contenteditable style="margin-top: 20px;">
+<span class="fragment burn" data-fragment-index="2">&lt;polymer-element name="my-element"&gt;</span>
+  <span class="fragment burn" data-fragment-index="3">&lt;template&gt;
+    &lt;h2&gt;
+      Hello, I'm a Polymer element
+    &lt;/h2&gt;
+  &lt;/template&gt;</span>
+  <span class="fragment burn" data-fragment-index="4">&lt;script&gt;Polymer("my-element");&lt;/script&gt;</span>
+<span class="fragment burn" data-fragment-index="2">&lt;/polymer-element&gt;</span>
+          </code></pre>
+
+          <pre style="font-size: 27px;"><code data-trim data-noescape contenteditable style="margin-top: 20px;">
+<span class="fragment burn" data-fragment-index="5">&lt;!-- Ready to rock! --&gt;
+&lt;my-element&gt;&lt;/my-element&gt;</span>
+          </code></pre>
+
+          <div class="widget">
+            <my-element></my-element>
+          </div>
         </section>
 
 
@@ -1034,11 +576,331 @@
           <h3>Using Your Element</h3>
           <hr>
           <br>
-          <p><code>&lt;my-widget&gt;&lt;/my-widget&gt; <span class="right lighten" style="margin-right: 50px;">// OR</span></code></p>
-          <p><code>document.createElement("my-widget") <span class="right lighten" style="margin-right: 50px;">// OR</span></code></p>
-          <p><code>new Widget()</code></p>
+          <p><code>&lt;my-element&gt;&lt;/my-element&gt; <span class="right lighten" style="margin-right: 50px;">// OR</span></code></p>
+          <p><code>document.createElement("my-element") <span class="right lighten" style="margin-right: 50px;">// OR</span></code></p>
+          <p><code>new MyElement()</code></p>
         </section>
 
+
+        <section>
+          <h1>DEMO!</h1>
+        </section>
+
+
+        <section id="demo-style-encapsulation" class="demo">
+          <h3>Style Encapsulation</h3>
+          
+          <pre style="font-size: 25px;"><code data-trim data-noescape contenteditable style="margin-top: 20px;">
+<span class="fragment burn" data-fragment-index="1">&lt;polymer-element name="my-element"&gt;</span>
+  <span class="fragment burn" data-fragment-index="2">&lt;template&gt;
+    &lt;style&gt;
+      h3 { color: white; background: tomato; }
+    &lt;/style&gt;
+    &lt;h3&gt;A Shadow H3 Header&lt;/h3&gt;
+  &lt;/template&gt;</span>
+  <span class="fragment burn" data-fragment-index="3">&lt;script&gt;Polymer('my-element');&lt;/script&gt;</span>
+<span class="fragment burn" data-fragment-index="1">&lt;/polymer-element&gt;</span>
+          </code></pre>
+
+          <polymer-element name="style-encapsulation" noscript>
+            <template>
+              <style>
+                h3 {
+                  color: white;
+                  background: tomato;
+                }
+              </style>
+              <h3>A Shadow H3 Header</h3>
+            </template>
+          </polymer-element>
+
+          <div>
+            <h3>An H3 Header</h3>
+            <div class="widget">
+              <style-encapsulation></style-encapsulation>
+            </div>
+          </div>
+        </section>
+
+
+        <section id="demo-applyAuthorStyles" class="left-align demo">
+          <p><strong><code>applyAuthorStyles</code></strong> (default: <code>false</code>)</p>
+          <p><code>false</code>: Author styles <strong>will not</strong> affect your component.</p>
+          <p><code>true</code>: Author styles <strong>will</strong> affect your component.</p>
+          <br>
+          <div>
+
+            <polymer-element name="apply-styles" attributes="apply">
+              <template>
+                <style>
+                  h3 {
+                    color: white;
+                    background: tomato;
+                  }
+                </style>
+                <h3>A Shadow H3 Header</h3>
+              </template>
+              <script>
+                Polymer('apply-styles', {
+                  applyChanged: function() {
+                    this.shadowRoot.applyAuthorStyles = this.getAttribute('apply') === 'true';
+                  }
+                });
+              </script>
+            </polymer-element>
+
+            <div class="center-align">
+              <h3>An H3 Header</h3>
+              <div class="widget">
+                <apply-styles apply="false"></apply-styles>
+              </div>
+            </div>
+
+            <div class="wrap">
+              <button class="demo-btn right" onclick="demos.applyAuthorStyles();">Toggle</button>
+              <code>applyAuthorStyles: <span id="isAuthorStyles"></span></code>
+            </div>
+            
+          </div>
+        </section>
+
+
+        <section id="demo-resetStyleInheritance" class="left-align demo">
+          <p><strong><code>resetStyleInheritance</code></strong> (default: <code>false</code>)</p>
+          <p><code>false</code>: Inheritable styles <strong>will</strong> affect your component.</p>
+          <p><code>true</code>: Inheritable styles <strong>will not</strong> affect your component.</p>
+          <br>
+          <div>
+
+            <polymer-element name="reset-inheritance" attributes="reset">
+              <template>
+                <style>
+                  h3 {
+                    color: white;
+                    background: tomato;
+                  }
+                </style>
+                <h3>A Shadow H3 Header</h3>
+              </template>
+              <script>
+                Polymer('reset-inheritance', {
+                  resetChanged: function() {
+                    this.shadowRoot.resetStyleInheritance = this.getAttribute('reset') === 'true';
+                  }
+                });
+              </script>
+            </polymer-element>
+
+            <div class="center-align">
+              <h3>An H3 Header</h3>
+              <div class="widget">
+                <reset-inheritance></reset-inheritance>
+              </div>
+            </div>
+
+            <div class="wrap">
+              <button class="demo-btn right" onclick="demos.resetStyleInheritance();">Toggle</button>
+              <code>resetStyleInheritance: <span id="isStyleInheritance"></span></code>
+            </div>
+
+          </div>
+        </section>
+
+
+        <section class="left-align">
+          <h3>You can <strong>poke holes</strong> in the <br>shadow boundary with the <br><strong>part</strong> attribute.</h3>
+        </section>
+
+
+        <section id="demo-parts" class="demo" style="height: 600px;">
+          <h3>Styling Parts</h3>
+          <div class="demo-code">
+            <div class="ribbon-container">
+              <pre style="font-size: 25px;"><code data-trim data-noescape contenteditable style="margin-top: 20px;">
+<span class="fragment burn" data-fragment-index="1">&lt;polymer-element name="my-element"&gt;</span>
+  <span class="fragment burn" data-fragment-index="2">&lt;template&gt;
+    &lt;h3 part="heading"&gt;Interesting Article&lt;/h3&gt;
+    &lt;p part="article"&gt;Article copy is special!&lt;/p&gt;
+  &lt;/template&gt;</span>
+  <span class="fragment burn" data-fragment-index="3">&lt;script&gt;Polymer('my-element');&lt;/script&gt;</span>
+<span class="fragment burn" data-fragment-index="1">&lt;polymer-element&gt;</span>
+              </code></pre>
+            </div>
+
+            <pre style="font-size: 25px;"><code data-trim data-noescape contenteditable style="margin-top: 20px;">
+<span class="fragment burn" data-fragment-index="4">&lt;style&gt;
+  my-element::part(heading) { font-family: Courier; }
+  my-element::part(article) { font-style: italic; }
+&lt;/style&gt;</span>
+            </code></pre>
+            <aside class="notes">
+              <p>part attribute and part pseudo selector</p>
+
+              <p>previously called "pseudo"</p>
+
+              <p>kind of like getters for CSS</p>
+            </aside>
+          </div>
+
+          <style>
+            styling-parts::part(heading) { font-family: Courier; }
+            styling-parts::part(article) { font-style: italic; }
+          </style>
+          
+          <polymer-element name="styling-parts" noscript>
+            <template>
+              <h3 part="heading">Interesting Article</h3>
+              <p part="article">Article copy is special!</p>
+            </template>
+          </polymer-element>
+
+          <div class="widget">
+            <styling-parts></styling-parts>
+          </div>
+        </section>
+
+
+        <section>
+          <h1>DEMO!</h1>
+        </section>
+
+
+        <section class="left-align">
+          <h3><strong>Insertion points</strong> invite content from the host element into the Shadow DOM.</h3>
+
+          <h3>Use the <strong>&lt;content&gt; tag</strong> to create an insertion point.</h3>
+        </section>
+
+
+        <section id="demo-insertion-points" class="demo">
+          <h3>Insertion Points</h3>
+          <div class="demo-code">
+            <div class="ribbon-container">
+              <pre style="font-size: 28px;"><code data-trim contenteditable style="margin-top: 20px;">
+&lt;polymer-element name="x-pokemon"&gt;
+  &lt;template&gt;
+    &lt;h2&gt;A Wild &lt;content&gt;&lt;/content&gt; Appeared!&lt;/h2&gt;
+  &lt;/template&gt;
+  &lt;script&gt;Polymer('x-pokemon');&lt;/script&gt;
+&lt;/polymer-element&gt;
+              </code></pre>
+            </div>
+
+            <pre style="font-size: 28px;"><code data-trim contenteditable style="margin-top: 20px;">
+&lt;x-pokemon&gt;Jigglypuff&lt;/x-pokemon&gt;
+            </code></pre>
+          </div>
+
+          <polymer-element name="x-pokemon" noscript>
+            <template>
+              <h2>A Wild <content></content> Appeared!</h2>
+            </template>
+          </polymer-element>
+
+          <div class="widget">
+            <x-pokemon>Jigglypuff</x-pokemon>
+          </div>
+        </section>
+
+        <section class="left-align">
+          <h3>Specific content can be targeted with the <strong>select</strong> attribute. </h3>
+        </section>
+
+        <section id="demo-select" class="demo">
+          <h3>Select</h3>
+          <div class="ribbon-container">
+            <pre style="font-size: 24px;"><code data-trim contenteditable style="margin-top: 20px;">
+&lt;polymer-element name="user-profile" noscript&gt;
+  &lt;template&gt;
+    &lt;h3&gt;Last Name: &lt;content select=".last-name"&gt;&lt;/content&gt;&lt;/h3&gt;
+    &lt;h3&gt;First Name: &lt;content select=".first-name"&gt;&lt;/content&gt;&lt;/h3&gt;
+    &lt;h3&gt;&lt;content select=""&gt;&lt;/content&gt;&lt;/h3&gt;
+  &lt;/template&gt;
+&lt;/polymer-element&gt;
+            </code></pre>
+          </div>
+
+          <pre style="font-size: 24px;"><code data-trim contenteditable style="margin-top: 20px;">
+&lt;user-profile&gt;
+  Hello World
+  &lt;span class="first-name"&gt;Rob&lt;/span&gt;
+  &lt;span class="last-name"&gt;Dodson&lt;/span&gt;
+&lt;/user-profile&gt;
+          </code></pre>
+
+          <polymer-element name="user-profile">
+            <template>
+              <style>
+                h3 { margin: 0; text-align: left; }
+              </style>
+              <h3>Last Name: <content select=".last-name"></content></h3>
+              <h3>First Name: <content select=".first-name"></content></h3>
+              <h3><content select=""></content></h3>
+            </template>
+            <script>Polymer("user-profile");</script>
+          </polymer-element>
+
+          <div class="widget expand">
+            <user-profile>
+              Hello World
+              <span class="first-name">Rob</span>
+              <span class="last-name">Dodson</span>
+            </user-profile>
+          </div>
+        </section>
+
+        <section>
+          <a href="http://html5-demos.appspot.com/static/shadowdom-visualizer/index.html"><img src="./img/shadow-dom-viz.png"></a>
+        </section>
+
+
+        <section class="demo">
+          <h3>Attributes</h3>
+          <pre style="font-size: 27px;"><code data-trim data-noescape contenteditable style="margin-top: 20px;">
+<span class="fragment burn" data-fragment-index="1">&lt;polymer-element name="fav-color" attributes="color"&gt;</span>
+  <span class="fragment burn" data-fragment-index="2">&lt;template&gt;
+    &lt;h2&gt;My favorite color is: {{ color }}&lt;/h2&gt;
+  &lt;/template&gt;</span>
+  <span class="fragment burn" data-fragment-index="3">&lt;script&gt;
+    Polymer("fav-color", {
+      color: "Orange"
+    });
+  &lt;/script&gt;</span>
+<span class="fragment burn" data-fragment-index="1">&lt;/polymer-element&gt;</span>
+          </code></pre>
+          <pre style="font-size: 27px;"><code data-trim data-noescape contenteditable style="margin-top: 20px;">
+<span class="fragment burn" data-fragment-index="4">&lt;fav-color color="Purple"&gt;&lt;/fav-color&gt;</span>
+          </code></pre>
+          <div class="widget">
+            <fav-color color="Purple"></fav-color>
+          </div>
+        </section>
+
+        <section class="demo">
+          <h3>Live Bindings</h3>
+          <pre style="font-size: 24px;"><code data-trim data-noescape contenteditable style="margin-top: 20px;">
+<span class="fragment burn" data-fragment-index="1">&lt;polymer-element name="color-picker" attributes="color"&gt;</span>
+  <span class="fragment burn" data-fragment-index="2">&lt;template&gt;
+    &lt;p&gt;My favorite color is
+      &lt;span style="background: {{ color }}"&gt;{{ color }}&lt;/span&gt;
+    &lt;/p&gt;
+    &lt;input type="text" value="{{ color }}"&gt;
+  &lt;/template&gt;</span>
+  <span class="fragment burn" data-fragment-index="3">&lt;script&gt;
+    Polymer("color-picker", { color: "Tomato" });
+  &lt;/script&gt;</span>
+<span class="fragment burn" data-fragment-index="1">&lt;/polymer-element&gt;</span>
+          </code></pre>
+
+          <div class="widget">
+            <!-- disable-events is something I added to kill reveal.js key listeners -->
+            <color-picker data-disable-events="true"></color-picker>
+          </div>
+
+          <aside class="notes">
+            <strong>!!! DO NOT TYPE ANYTHING !!!</strong>
+          </aside>
+        </section>
 
         <section class="left-align">
           <h3>Lifecycle Callbacks</h3>
@@ -1046,66 +908,30 @@
           <div style="font-size: 32px;">
             <div class="fragment burn">
               <p>
-                <strong><code>createdCallback()</code></strong><br>
-                When a new instance is created. Use like a constructor
+                <strong><code>ready()</code></strong><br>
+                When a new instance is created. Do setup work here
               </p>
             </div>
             <div class="fragment burn">
               <p>
-                <strong><code>enteredViewCallback()<sup>*</sup></code></strong><br>
+                <strong><code>enteredView()</code></strong><br>
                 When an element is added to the page<br>
-                <sup>*</sup><em>previously named <strong><code>enteredDocumentCallback</code></strong></em>
               </p>
             </div>
             <div class="fragment burn">
               <p>
-                <strong><code>leftViewCallback()<sup>*</sup></code></strong><br>
+                <strong><code>leftView()</code></strong><br>
                 When an element is removed from the page<br>
-                <sup>*</sup><em>previously named <strong><code>leftDocumentCallback</code></strong></em>
               </p>
             </div>
             <div class="fragment burn">
               <p>
-                <strong><code>attributeChangedCallback(attrName, oldVal, newVal)</code></strong><br>
+                <strong><code>attributeChanged(attrName, oldVal, newVal)</code></strong><br>
                 When one of an element's attributes changes
               </p>
             </div>
           </div>
         </section>
-
-
-        <section>
-          <h3>Type Extension Elements</h3>
-          <pre class="full-bleed"><code data-trim contenteditable style="margin-top: 20px;">
-var MyButton = document.register("my-button", {
-  extends: "button",
-  prototype: Object.create(HTMLButtonElement.prototype)
-});
-          </code></pre>
-          <br>
-          <h4>Add your element to the page</h4>
-          <pre class="full-bleed"><code data-trim data-noescape contenteditable style="margin-top: 20px;">
-<span>&lt;button is="my-button"&gt;&lt;/button&gt;</span>
-<span>var btn = document.createElement("button", "my-button");</span>
-<span>var btn = new MyButton();</span>
-          </code></pre>
-          <aside class="notes">
-            Called "Type Extension Elements"
-          </aside>
-        </section>
-
-
-        <section>
-          <h3>Goodbye &lt;element&gt;... for now</h3>
-          <pre style="font-size: 30px;"><code data-trim contenteditable style="margin-top: 20px;">
-<!-- Do not use! Will be removed. -->
-&lt;element name="my-widget"&gt;
-  ...
-&lt;/element&gt;
-          </code></pre>
-          <h3>It's taking a <a href="http://lists.w3.org/Archives/Public/public-webapps/2013JulSep/0290.html">beauty nap</a></h3>
-        </section>
-
 
         <section id="mailchimp-demo">
           <h3>MailChimp</h3>
@@ -1215,27 +1041,16 @@ var MyButton = document.register("my-button", {
         </section>
 
 
-        <section class="left-align">
-          <h2>Browser Support</h2>
-          <hr>
-          <h3><i class="icon-ok-circle supported"></i> Chrome / Mobile Chrome</h3>
-          <h3><i class="icon-remove-circle not-supported"></i> Firefox <em>(In Development)</em></h3>
-          <h3><i class="icon-remove-circle not-supported"></i> Internet Explorer</h3>
-          <h3><i class="icon-remove-circle not-supported"></i> Safari / Mobile Safari</h3>
-          <h3><i class="icon-ok-circle supported"></i> Opera / Opera Mini</h3>
-        </section>
-
-
         <section>
           <div class="spec-list">
-            <h3 class="spec-name faded">Templates</h3>
-            <p class="spec-definition faded"><em>Scaffolding</em></p>
-            <h3 class="spec-name faded">Shadow DOM</h3>
-            <p class="spec-definition faded"><em>Encapsulation</em></p>
-            <h3 class="spec-name fragment burn fade-out" data-fragment-index="1">Custom Elements</h3>
-            <p class="spec-definition fragment burn fade-out" data-fragment-index="1"><em>Extensions</em></p>
-            <h3 class="spec-name fragment burn" data-fragment-index="1">Imports</h3>
-            <p class="spec-definition fragment burn" data-fragment-index="1"><em>Packaging</em></p>
+            <h2 class="spec-name faded">Templates</h2>
+            <h3 class="spec-definition faded"><em>Scaffolding</em></h3>
+            <h2 class="spec-name faded">Shadow DOM</h2>
+            <h3 class="spec-definition faded"><em>Encapsulation</em></h3>
+            <h2 class="spec-name fragment burn fade-out" data-fragment-index="1">Custom Elements</h2>
+            <h3 class="spec-definition fragment burn fade-out" data-fragment-index="1"><em>Extensions</em></h3>
+            <h2 class="spec-name fragment burn" data-fragment-index="1">Imports</h2>
+            <h3 class="spec-definition fragment burn" data-fragment-index="1"><em>Packaging</em></h3>
           </div>
         </section>
 
@@ -1275,233 +1090,6 @@ var MyButton = document.register("my-button", {
             <p style="font-size: 45px;"><em>No need to check if the import is loaded</em></p>
         </section>
 
-
-        <!-- <section id="demo-basic-import" class="demo">
-
-<p class="left-align" style="font-size: 28px;"><code>imports/blog-post.html</code></p>
-          <pre><code data-trim contenteditable style="margin-top: 20px;">
-&lt;template id="blog-post"&gt;
-  &lt;h1&gt;Awesome header&lt;/h1&gt;
-  &lt;p&gt;Here is some really interesting paragraph content.&lt;/p&gt;
-&lt;/template&gt;
-          </code></pre>
-
-<p class="left-align" style="font-size: 28px;"><code>index.html</code></p>
-          <pre><code data-trim contenteditable style="margin-top: 20px;">
-&lt;head&gt;
-  &lt;link rel="import" href="./imports/blog-post.html"&gt;
-&lt;/head&gt;
-          </code></pre>
-
-          <pre><code data-trim contenteditable style="margin-top: 20px;">
-var link = document.querySelector('link[rel=import]');
-var template = link.import.querySelector('#blog-post');
-document.body.appendChild(template.content.cloneNode(true));
-          </code></pre>
-
-          <div class="widget expand"></div>
-        </section> -->
-
-
-        <section>
-          <h3>The import</h3>
-          <pre style="font-size: 27px;" class="full-bleed"><code data-trim data-noescape contenteditable style="margin-top: 20px;">
-&lt;template&gt;
-  ...
-&lt;/template&gt;
-
-&lt;script&gt;
-  <span class="fragment burn" data-fragment-index="1">var owner = document.currentScript.ownerDocument;</span>
-  <span class="fragment burn" data-fragment-index="2">var tmpl = owner.querySelector("template");</span>
-  
-  <span class="fragment burn" data-fragment-index="3">var WidgetProto = Object.create(HTMLElement.prototype);
-
-  WidgetProto.createdCallback = function() {
-    ...
-  };</span>
-
-  <span class="fragment burn" data-fragment-index="4">var Widget = document.register("my-widget", {
-    prototype: WidgetProto
-  });</span>
-&lt;/script&gt;
-          </code></pre>
-        </section>
-
-
-        <section>
-          <img class="chromeless" src="./img/owner-document.png">
-        </section>
-
-        <section class="left-align">
-          <h2>Browser Support</h2>
-          <hr>
-          <h3><i class="icon-ok-circle supported"></i> Chrome / Mobile Chrome <br><em>(behind a flag)</em></h3>
-          <h3><i class="icon-remove-circle not-supported"></i> Firefox</h3>
-          <h3><i class="icon-remove-circle not-supported"></i> Internet Explorer</h3>
-          <h3><i class="icon-remove-circle not-supported"></i> Safari / Mobile Safari</h3>
-          <h3><i class="icon-remove-circle not-supported"></i> Opera / Opera Mini</h3>
-        </section>
-
-        <!-- <section>
-          <div class="spec-list">
-            <h2 class="spec-name">Templates</h2>
-            <h3 class="voice voice-human spec-definition"><em>Scaffolding</em></h3>
-            <h2 class="spec-name">Shadow DOM</h2>
-            <h3 class="voice voice-human spec-definition"><em>Encapsulation</em></h3>
-            <h2 class="spec-name">Custom Elements</h2>
-            <h3 class="voice voice-human spec-definition"><em>Extensions</em></h3>
-            <h2 class="spec-name">Imports</h2>
-            <h3 class="voice voice-human spec-definition"><em>Packaging</em></h3>
-          </div>
-        </section> -->
-
-        <section class="left-align">
-          <h2>Use Chrome Canary</h2>
-          <hr>
-          <p style="font-size: 50px;">In <code>chrome://flags</code></p>
-          <p style="font-size: 50px;"><i class="icon-ok supported"></i> Experimental Web Platform features</p>
-          <p style="font-size: 50px;"><i class="icon-ok supported"></i> Experimental JavaScript</p>
-          <p style="font-size: 50px;"><i class="icon-ok supported"></i> HTML Imports</p>
-          <hr>
-          <p style="font-size: 50px;"><i class="icon-ok supported"></i> Show Shadow DOM in Developer Tools</p>
-        </section>
-
-
-        <section>
-          <h1>Use 'em Today!</h1>
-        </section>
-
-        <section>
-          <h1>Polymer</h1>
-        </section>
-
-        <section class="left-align">
-          <h2>A collection of <strong>polyfills</strong> which let us use Web Components in <strong>all modern browsers.</strong></h2>
-          <aside class="notes">
-            IE 10+
-            Safari 6+
-          </aside>
-        </section>
-
-        <section class="left-align">
-          <h2><em>Also</em> a <strong>framework</strong> for building applications with <strong>web components.</strong></h2>
-        </section>
-
-        <section class="left-align">
-          <h3>Polymer Extras</h3>
-          <hr>
-          <h3><i class="icon-ok-circle supported"></i> Web Animations</h3>
-          <h3><i class="icon-ok-circle supported"></i> Pointer Events</h3>
-          <h3><i class="icon-ok-circle supported"></i> Template Binding</h3>
-          <h3><i class="icon-ok-circle supported"></i> Node.bind()</h3>
-          <h3><i class="icon-ok-circle supported"></i> Model-driven Views (MDV)</h3>
-        </section>
-
-        <section class="demo">
-          <h3>Basic Polymer Element</h3>
-          <pre style="font-size: 27px;"><code data-trim data-noescape contenteditable style="margin-top: 20px;">
-<span class="fragment burn" data-fragment-index="1">&lt;script src="polymer.js"&gt;&lt;/script&gt;</span>
-          </code></pre>
-
-          <pre style="font-size: 27px;"><code data-trim data-noescape contenteditable style="margin-top: 20px;">
-<span class="fragment burn" data-fragment-index="2">&lt;polymer-element name="my-element"&gt;</span>
-  <span class="fragment burn" data-fragment-index="3">&lt;template&gt;
-    &lt;h2&gt;
-      Hello, I'm a Polymer element
-    &lt;/h2&gt;
-  &lt;/template&gt;</span>
-  <span class="fragment burn" data-fragment-index="4">&lt;script&gt;Polymer("my-element");&lt;/script&gt;</span>
-<span class="fragment burn" data-fragment-index="2">&lt;/polymer-element&gt;</span>
-          </code></pre>
-
-          <pre style="font-size: 27px;"><code data-trim data-noescape contenteditable style="margin-top: 20px;">
-<span class="fragment burn" data-fragment-index="5">&lt;!-- Ready to rock! --&gt;
-&lt;my-element&gt;&lt;/my-element&gt;</span>
-          </code></pre>
-
-          <div class="widget">
-            <my-element></my-element>
-          </div>
-        </section>
-
-        <section class="demo">
-          <h3>Attributes</h3>
-          <pre style="font-size: 27px;"><code data-trim data-noescape contenteditable style="margin-top: 20px;">
-<span class="fragment burn" data-fragment-index="1">&lt;polymer-element name="fav-color" attributes="color"&gt;</span>
-  <span class="fragment burn" data-fragment-index="2">&lt;template&gt;
-    &lt;h2&gt;My favorite color is: {{ color }}&lt;/h2&gt;
-  &lt;/template&gt;</span>
-  <span class="fragment burn" data-fragment-index="3">&lt;script&gt;
-    Polymer("fav-color", {
-      color: "Orange"
-    });
-  &lt;/script&gt;</span>
-<span class="fragment burn" data-fragment-index="1">&lt;/polymer-element&gt;</span>
-          </code></pre>
-          <pre style="font-size: 27px;"><code data-trim data-noescape contenteditable style="margin-top: 20px;">
-<span class="fragment burn" data-fragment-index="4">&lt;fav-color color="Purple"&gt;&lt;/fav-color&gt;</span>
-          </code></pre>
-          <div class="widget">
-            <fav-color color="Purple"></fav-color>
-          </div>
-        </section>
-
-        <section class="demo">
-          <h3>Live Bindings</h3>
-          <pre style="font-size: 24px;"><code data-trim data-noescape contenteditable style="margin-top: 20px;">
-<span class="fragment burn" data-fragment-index="1">&lt;polymer-element name="color-picker" attributes="color"&gt;</span>
-  <span class="fragment burn" data-fragment-index="2">&lt;template&gt;
-    &lt;p&gt;My favorite color is
-      &lt;span style="background: {{ color }}"&gt;{{ color }}&lt;/span&gt;
-    &lt;/p&gt;
-    &lt;input type="text" value="{{ color }}"&gt;
-  &lt;/template&gt;</span>
-  <span class="fragment burn" data-fragment-index="3">&lt;script&gt;
-    Polymer("color-picker", { color: "Tomato" });
-  &lt;/script&gt;</span>
-<span class="fragment burn" data-fragment-index="1">&lt;/polymer-element&gt;</span>
-          </code></pre>
-
-          <div class="widget">
-            <!-- disable-events is something I added to kill reveal.js key listeners -->
-            <color-picker data-disable-events="true"></color-picker>
-          </div>
-
-          <aside class="notes">
-            <strong>!!! DO NOT TYPE ANYTHING !!!</strong>
-          </aside>
-        </section>
-
-        <section class="left-align">
-          <h3>Lifecycle Callbacks</h3>
-          <hr>
-          <div style="font-size: 32px;">
-            <div class="fragment burn">
-              <p>
-                <strong><code>created()</code></strong><br>
-                When a new instance is created. Use like a constructor
-              </p>
-            </div>
-            <div class="fragment burn">
-              <p>
-                <strong><code>enteredView()</code></strong><br>
-                When an element is added to the page<br>
-              </p>
-            </div>
-            <div class="fragment burn">
-              <p>
-                <strong><code>leftView()</code></strong><br>
-                When an element is removed from the page<br>
-              </p>
-            </div>
-            <div class="fragment burn">
-              <p>
-                <strong><code>attributeChanged(attrName, oldVal, newVal)</code></strong><br>
-                When one of an element's attributes changes
-              </p>
-            </div>
-          </div>
-        </section>
 
         <section>
           <h1><strong>There's moar!</strong></h1>
