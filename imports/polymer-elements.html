@@ -1,14 +1,36 @@
-<!-- <my-element> definition -->
-<polymer-element name="my-element">
+<polymer-element name="my-element" noscript>
   <template>
     <h2>
       Hello, I'm a <strong>Polymer</strong> element
     </h2>
   </template>
-  <script>Polymer("my-element");</script>
 </polymer-element>
 
-<!-- <fav-color> definition -->
+<polymer-element name="styled-encapsulation" noscript>
+  <template>
+    <style>
+      h3 {
+        color: white;
+        background: tomato;
+      }
+    </style>
+    <h3>A Shadow H3 Header</h3>
+  </template>
+</polymer-element>
+
+<polymer-element name="styling-parts" noscript>
+  <template>
+    <h3 part="heading">Interesting Article</h3>
+    <p part="article">Article copy is special!</p>
+  </template>
+</polymer-element>
+
+<polymer-element name="x-pokemon" noscript>
+  <template>
+    <h2>A Wild <content></content> Appeared!</h2>
+  </template>
+</polymer-element>
+
 <polymer-element name="fav-color" attributes="color">
   <template>
     <h2>My favorite color is: {{ color }}</h2>
@@ -20,7 +42,6 @@
   </script>
 </polymer-element>
 
-<!-- <color-picker> definition -->
 <polymer-element name="color-picker">
   <template>
     <style>

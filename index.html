@@ -656,24 +656,23 @@
 
 
         <section class="demo">
-          <h3>Custom Element + Polymer</h3>
+          <h3>Custom Elements + Polymer</h3>
           <pre style="font-size: 27px;"><code data-trim data-noescape contenteditable style="margin-top: 20px;">
 <span class="fragment burn" data-fragment-index="1">&lt;script src="polymer.js"&gt;&lt;/script&gt;</span>
           </code></pre>
 
           <pre style="font-size: 27px;"><code data-trim data-noescape contenteditable style="margin-top: 20px;">
-<span class="fragment burn" data-fragment-index="2">&lt;polymer-element name="my-element"&gt;</span>
+<span class="fragment burn" data-fragment-index="2">&lt;polymer-element name="my-element" noscript&gt;</span>
   <span class="fragment burn" data-fragment-index="3">&lt;template&gt;
     &lt;h2&gt;
       Hello, I'm a Polymer element
     &lt;/h2&gt;
   &lt;/template&gt;</span>
-  <span class="fragment burn" data-fragment-index="4">&lt;script&gt;Polymer("my-element");&lt;/script&gt;</span>
 <span class="fragment burn" data-fragment-index="2">&lt;/polymer-element&gt;</span>
           </code></pre>
 
           <pre style="font-size: 27px;"><code data-trim data-noescape contenteditable style="margin-top: 20px;">
-<span class="fragment burn" data-fragment-index="5">&lt;!-- Ready to rock! --&gt;
+<span class="fragment burn" data-fragment-index="4">&lt;!-- Ready to rock! --&gt;
 &lt;my-element&gt;&lt;/my-element&gt;</span>
           </code></pre>
 
@@ -701,29 +700,16 @@
         <section id="demo-style-encapsulation" class="demo">
           <h3>Style Encapsulation</h3>
           
-          <pre style="font-size: 25px;"><code data-trim data-noescape contenteditable style="margin-top: 20px;">
-<span class="fragment burn" data-fragment-index="1">&lt;polymer-element name="my-element"&gt;</span>
+          <pre style="font-size: 28px;"><code data-trim data-noescape contenteditable style="margin-top: 20px;">
+<span class="fragment burn" data-fragment-index="1">&lt;polymer-element name="my-element" noscript&gt;</span>
   <span class="fragment burn" data-fragment-index="2">&lt;template&gt;
     &lt;style&gt;
       h3 { color: white; background: tomato; }
     &lt;/style&gt;
     &lt;h3&gt;A Shadow H3 Header&lt;/h3&gt;
   &lt;/template&gt;</span>
-  <span class="fragment burn" data-fragment-index="3">&lt;script&gt;Polymer('my-element');&lt;/script&gt;</span>
 <span class="fragment burn" data-fragment-index="1">&lt;/polymer-element&gt;</span>
           </code></pre>
-
-          <polymer-element name="styled-encapsulation" noscript>
-            <template>
-              <style>
-                h3 {
-                  color: white;
-                  background: tomato;
-                }
-              </style>
-              <h3>A Shadow H3 Header</h3>
-            </template>
-          </polymer-element>
 
           <div>
             <h3>An H3 Header</h3>
@@ -822,24 +808,22 @@
           <h3>You can <strong>poke holes</strong> in the <br>shadow boundary with the <br><strong>part</strong> attribute.</h3>
         </section>
 
-
         <section id="demo-parts" class="demo" style="height: 600px;">
           <h3>Styling Parts</h3>
           <div class="demo-code">
             <div class="ribbon-container">
-              <pre style="font-size: 25px;"><code data-trim data-noescape contenteditable style="margin-top: 20px;">
-<span class="fragment burn" data-fragment-index="1">&lt;polymer-element name="my-element"&gt;</span>
+              <pre style="font-size: 27px;"><code data-trim data-noescape contenteditable style="margin-top: 20px;">
+<span class="fragment burn" data-fragment-index="1">&lt;polymer-element name="my-element" noscript&gt;</span>
   <span class="fragment burn" data-fragment-index="2">&lt;template&gt;
     &lt;h3 part="heading"&gt;Interesting Article&lt;/h3&gt;
     &lt;p part="article"&gt;Article copy is special!&lt;/p&gt;
   &lt;/template&gt;</span>
-  <span class="fragment burn" data-fragment-index="3">&lt;script&gt;Polymer('my-element');&lt;/script&gt;</span>
 <span class="fragment burn" data-fragment-index="1">&lt;polymer-element&gt;</span>
               </code></pre>
             </div>
 
-            <pre style="font-size: 25px;"><code data-trim data-noescape contenteditable style="margin-top: 20px;">
-<span class="fragment burn" data-fragment-index="4">&lt;style&gt;
+            <pre style="font-size: 27px;"><code data-trim data-noescape contenteditable style="margin-top: 20px;">
+<span class="fragment burn" data-fragment-index="3">&lt;style&gt;
   my-element::part(heading) { font-family: Courier; }
   my-element::part(article) { font-style: italic; }
 &lt;/style&gt;</span>
@@ -857,13 +841,6 @@
             styling-parts::part(heading) { font-family: Courier; }
             styling-parts::part(article) { font-style: italic; }
           </style>
-          
-          <polymer-element name="styling-parts" noscript>
-            <template>
-              <h3 part="heading">Interesting Article</h3>
-              <p part="article">Article copy is special!</p>
-            </template>
-          </polymer-element>
 
           <div class="widget">
             <styling-parts></styling-parts>
@@ -887,24 +864,17 @@
           <h3>Insertion Points</h3>
           <div class="demo-code">
             <pre style="font-size: 28px;"><code data-trim data-noescape contenteditable style="margin-top: 20px;">
-<span class="fragment burn" data-fragment-index="1">&lt;polymer-element name="x-pokemon"&gt;</span>
+<span class="fragment burn" data-fragment-index="1">&lt;polymer-element name="x-pokemon" noscript&gt;</span>
   <span class="fragment burn" data-fragment-index="2">&lt;template&gt;
     &lt;h2&gt;A Wild &lt;content&gt;&lt;/content&gt; Appeared!&lt;/h2&gt;
   &lt;/template&gt;</span>
-  <span class="fragment burn" data-fragment-index="3">&lt;script&gt;Polymer('x-pokemon');&lt;/script&gt;</span>
 <span class="fragment burn" data-fragment-index="1">&lt;/polymer-element&gt;</span>
             </code></pre>
 
             <pre style="font-size: 28px;"><code data-trim data-noescape contenteditable style="margin-top: 20px;">
-<span class="fragment burn" data-fragment-index="4">&lt;x-pokemon&gt;Jigglypuff&lt;/x-pokemon&gt;</span>
+<span class="fragment burn" data-fragment-index="3">&lt;x-pokemon&gt;Jigglypuff&lt;/x-pokemon&gt;</span>
             </code></pre>
           </div>
-
-          <polymer-element name="x-pokemon" noscript>
-            <template>
-              <h2>A Wild <content></content> Appeared!</h2>
-            </template>
-          </polymer-element>
 
           <div class="widget">
             <x-pokemon>Jigglypuff</x-pokemon>
