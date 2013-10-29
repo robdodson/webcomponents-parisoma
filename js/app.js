@@ -37,37 +37,6 @@
     section.appendChild(template.content.cloneNode(true));
   };
 
-  demos.doAuthorStyles = true;
-  demos.applyAuthorStyles = function applyAuthorStyles() {
-    var section = document.querySelector('#demo-applyAuthorStyles');
-    var output = section.querySelector('#isAuthorStyles');
-    var el = section.querySelector('apply-styles');
-    this.doAuthorStyles = !this.doAuthorStyles;
-    output.textContent = this.doAuthorStyles;
-    el.setAttribute('apply', this.doAuthorStyles);
-  };
-  demos.applyAuthorStyles();
-
-  demos.doResetStyles = true;
-  demos.resetStyleInheritance = function resetStyleInheritance() {
-    var section = document.querySelector('#demo-resetStyleInheritance');
-    var output = section.querySelector('#isStyleInheritance');
-    var el = section.querySelector('reset-inheritance');
-    this.doResetStyles = !this.doResetStyles;
-    output.textContent = this.doResetStyles;
-    el.setAttribute('reset', this.doResetStyles);
-  };
-  demos.resetStyleInheritance();
-
-  // demos.customProps = function customProps() {
-  //   var section = document.querySelector('#demo-custom-props');
-  //   var template = section.querySelector('template');
-  //   var host = section.querySelector('.widget');
-  //   var root = host.createShadowRoot();
-  //   root.appendChild(template.content.cloneNode(true));
-  // };
-  // demos.customProps();
-
   window.demos = demos;
 
 }(window.util));

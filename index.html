@@ -54,7 +54,7 @@
       <!-- Any section element inside of this container is displayed as a slide -->
       <div class="slides" style="zoom: 1 !important;">
 
-        <section class="left-align">
+        <!-- <section class="left-align">
           <h2 class="voice voice-human">Hi I'm Rob,</h2>
           <h2 class="voice voice-human">I'll be your guide today.</h2>
           <hr class="wide-rule">
@@ -67,7 +67,7 @@
             <p>I blog at...</p>
             <p>We're going to cover a lot of material...</p>
           </aside>
-        </section>
+        </section> -->
 
         <section>
           <h2 class="left-align voice voice-human" style="font-size: 90px;">Within this course...</h2>
@@ -277,7 +277,7 @@
         </section>
 
 
-        <section class="left-align">
+        <!-- <section class="left-align">
           <div style="display: inline-block; margin-right: 100px;">
             <code style="font-size: 43px;">
               &lt;mark-down&gt;<br>
@@ -292,7 +292,7 @@
             ### How _you_ doin?
             [Link me!](foo.com)
           </mark-down>
-        </section>
+        </section> -->
 
 
         <section class="left-align">
@@ -336,7 +336,54 @@
 
 
         <section>
-          <h3>{ support table goes here }</h3>
+          <h2>Support</h2>
+          <hr>
+          <table class="support-table">
+            <thead>
+              <tr>
+                <th></th>
+                <th><img width="70px" class="chromeless" src="./img/chrome-canary.png"></th>
+                <th><img width="70px" class="chromeless" src="./img/chrome.png"></th>
+                <th><img width="70px" class="chromeless" src="./img/firefox.png"></th>
+                <th><img width="70px" class="chromeless" src="./img/ie9-10.png"></th>
+                <th><img width="70px" class="chromeless" src="./img/safari.png"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><h4>Templates</h4></td>
+                <td><i class="icon-ok supported"></i></td>
+                <td><i class="icon-ok supported"></i></td>
+                <td><i class="icon-ok supported"></i></td>
+                <td><i class="icon-remove not-supported"></i></td>
+                <td><i class="icon-remove not-supported"></i></td>
+              </tr>
+              <tr>
+                <td><h4>Shadow DOM</h4></td>
+                <td><i class="icon-ok supported"></i></td>
+                <td><i class="icon-ok supported"></i></td>
+                <td><i class="icon-remove not-supported"></i></td>
+                <td><i class="icon-remove not-supported"></i></td>
+                <td><i class="icon-ok supported"></i></td>
+              </tr>
+              <tr>
+                <td><h4>Custom Elements</h4></td>
+                <td><i class="icon-ok supported"></i></td>
+                <td><i class="icon-ok supported"></i></td>
+                <td><i class="icon-remove not-supported"></i></td>
+                <td><i class="icon-remove not-supported"></i></td>
+                <td><i class="icon-remove not-supported"></i></td>
+              </tr>
+              <tr>
+                <td><h4>Imports</h4></td>
+                <td><i class="icon-ok supported"></i></td>
+                <td><i class="icon-remove not-supported"></i></td>
+                <td><i class="icon-remove not-supported"></i></td>
+                <td><i class="icon-remove not-supported"></i></td>
+                <td><i class="icon-remove not-supported"></i></td>
+              </tr>
+            </tbody>
+          </table>
         </section>
 
 
@@ -355,7 +402,54 @@
 
 
         <section>
-          <h3>{ support table goes here }</h3>
+          <h2>Support <span style="opacity: 0.5;">(with Polymer)</span></h2>
+          <hr>
+          <table class="support-table">
+            <thead>
+              <tr>
+                <th></th>
+                <th><img width="70px" class="chromeless" src="./img/chrome-canary.png"></th>
+                <th><img width="70px" class="chromeless" src="./img/chrome.png"></th>
+                <th><img width="70px" class="chromeless" src="./img/firefox.png"></th>
+                <th><img width="70px" class="chromeless" src="./img/ie9-10.png"></th>
+                <th><img width="70px" class="chromeless" src="./img/safari.png"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><h4>Templates</h4></td>
+                <td><i class="icon-ok supported"></i></td>
+                <td><i class="icon-ok supported"></i></td>
+                <td><i class="icon-ok supported"></i></td>
+                <td><i class="icon-ok supported"></i></td>
+                <td><i class="icon-ok supported"></i></td>
+              </tr>
+              <tr>
+                <td><h4>Shadow DOM</h4></td>
+                <td><i class="icon-ok supported"></i></td>
+                <td><i class="icon-ok supported"></i></td>
+                <td><i style="color: rgba(229, 139, 68, 1)" class="icon-warning-sign supported"></i></td>
+                <td><i style="color: rgba(229, 139, 68, 1)" class="icon-warning-sign supported"></i></td>
+                <td><i class="icon-ok supported"></i></td>
+              </tr>
+              <tr>
+                <td><h4>Custom Elements</h4></td>
+                <td><i class="icon-ok supported"></i></td>
+                <td><i class="icon-ok supported"></i></td>
+                <td><i class="icon-ok supported"></i></td>
+                <td><i class="icon-ok supported"></i></td>
+                <td><i class="icon-ok supported"></i></td>
+              </tr>
+              <tr>
+                <td><h4>Imports</h4></td>
+                <td><i class="icon-ok supported"></i></td>
+                <td><i class="icon-ok supported"></i></td>
+                <td><i class="icon-ok supported"></i></td>
+                <td><i class="icon-ok supported"></i></td>
+                <td><i class="icon-ok supported"></i></td>
+              </tr>
+            </tbody>
+          </table>
         </section>
 
 
@@ -410,6 +504,11 @@
   &lt;/script&gt;</span>
 <span class="fragment burn" data-fragment-index="1">&lt;/template&gt;</span>
 </code></pre>
+        </section>
+
+        <section>
+          <h3>The Content Keyword</h3>
+          <img class="chromeless" src="./img/template-content.png">
         </section>
 
         <section class="demo" id="demo-templates">
@@ -602,7 +701,7 @@
 <span class="fragment burn" data-fragment-index="1">&lt;/polymer-element&gt;</span>
           </code></pre>
 
-          <polymer-element name="style-encapsulation" noscript>
+          <polymer-element name="styled-encapsulation" noscript>
             <template>
               <style>
                 h3 {
@@ -617,13 +716,13 @@
           <div>
             <h3>An H3 Header</h3>
             <div class="widget">
-              <style-encapsulation></style-encapsulation>
+              <styled-encapsulation></styled-encapsulation>
             </div>
           </div>
         </section>
 
 
-        <section id="demo-applyAuthorStyles" class="left-align demo">
+        <!-- <section id="demo-applyAuthorStyles" class="left-align demo">
           <p><strong><code>applyAuthorStyles</code></strong> (default: <code>false</code>)</p>
           <p><code>false</code>: Author styles <strong>will not</strong> affect your component.</p>
           <p><code>true</code>: Author styles <strong>will</strong> affect your component.</p>
@@ -662,10 +761,10 @@
             </div>
             
           </div>
-        </section>
+        </section> -->
 
 
-        <section id="demo-resetStyleInheritance" class="left-align demo">
+        <!-- <section id="demo-resetStyleInheritance" class="left-align demo">
           <p><strong><code>resetStyleInheritance</code></strong> (default: <code>false</code>)</p>
           <p><code>false</code>: Inheritable styles <strong>will</strong> affect your component.</p>
           <p><code>true</code>: Inheritable styles <strong>will not</strong> affect your component.</p>
@@ -704,7 +803,7 @@
             </div>
 
           </div>
-        </section>
+        </section> -->
 
 
         <section class="left-align">
@@ -775,19 +874,17 @@
         <section id="demo-insertion-points" class="demo">
           <h3>Insertion Points</h3>
           <div class="demo-code">
-            <div class="ribbon-container">
-              <pre style="font-size: 28px;"><code data-trim contenteditable style="margin-top: 20px;">
-&lt;polymer-element name="x-pokemon"&gt;
-  &lt;template&gt;
+            <pre style="font-size: 28px;"><code data-trim data-noescape contenteditable style="margin-top: 20px;">
+<span class="fragment burn" data-fragment-index="1">&lt;polymer-element name="x-pokemon"&gt;</span>
+  <span class="fragment burn" data-fragment-index="2">&lt;template&gt;
     &lt;h2&gt;A Wild &lt;content&gt;&lt;/content&gt; Appeared!&lt;/h2&gt;
-  &lt;/template&gt;
-  &lt;script&gt;Polymer('x-pokemon');&lt;/script&gt;
-&lt;/polymer-element&gt;
-              </code></pre>
-            </div>
+  &lt;/template&gt;</span>
+  <span class="fragment burn" data-fragment-index="3">&lt;script&gt;Polymer('x-pokemon');&lt;/script&gt;</span>
+<span class="fragment burn" data-fragment-index="1">&lt;/polymer-element&gt;</span>
+            </code></pre>
 
-            <pre style="font-size: 28px;"><code data-trim contenteditable style="margin-top: 20px;">
-&lt;x-pokemon&gt;Jigglypuff&lt;/x-pokemon&gt;
+            <pre style="font-size: 28px;"><code data-trim data-noescape contenteditable style="margin-top: 20px;">
+<span class="fragment burn" data-fragment-index="4">&lt;x-pokemon&gt;Jigglypuff&lt;/x-pokemon&gt;</span>
             </code></pre>
           </div>
 
@@ -809,23 +906,23 @@
         <section id="demo-select" class="demo">
           <h3>Select</h3>
           <div class="ribbon-container">
-            <pre style="font-size: 24px;"><code data-trim contenteditable style="margin-top: 20px;">
-&lt;polymer-element name="user-profile" noscript&gt;
-  &lt;template&gt;
+            <pre style="font-size: 24px;"><code data-trim data-noescape contenteditable style="margin-top: 20px;">
+<span class="fragment burn" data-fragment-index="1">&lt;polymer-element name="user-profile" noscript&gt;</span>
+  <span class="fragment burn" data-fragment-index="2">&lt;template&gt;
     &lt;h3&gt;Last Name: &lt;content select=".last-name"&gt;&lt;/content&gt;&lt;/h3&gt;
     &lt;h3&gt;First Name: &lt;content select=".first-name"&gt;&lt;/content&gt;&lt;/h3&gt;
     &lt;h3&gt;&lt;content select=""&gt;&lt;/content&gt;&lt;/h3&gt;
-  &lt;/template&gt;
-&lt;/polymer-element&gt;
+  &lt;/template&gt;</span>
+<span class="fragment burn" data-fragment-index="1">&lt;/polymer-element&gt;</span>
             </code></pre>
           </div>
 
-          <pre style="font-size: 24px;"><code data-trim contenteditable style="margin-top: 20px;">
-&lt;user-profile&gt;
+          <pre style="font-size: 24px;"><code data-trim data-noescape contenteditable style="margin-top: 20px;">
+<span class="fragment burn" data-fragment-index="3">&lt;user-profile&gt;
   Hello World
   &lt;span class="first-name"&gt;Rob&lt;/span&gt;
   &lt;span class="last-name"&gt;Dodson&lt;/span&gt;
-&lt;/user-profile&gt;
+&lt;/user-profile&gt;</span>
           </code></pre>
 
           <polymer-element name="user-profile">
@@ -850,7 +947,74 @@
         </section>
 
         <section>
-          <a href="http://html5-demos.appspot.com/static/shadowdom-visualizer/index.html"><img src="./img/shadow-dom-viz.png"></a>
+          <h1>DEMO!</h1>
+        </section>
+
+        <section class="left-align">
+          <h3>Lifecycle Callbacks</h3>
+          <hr>
+          <div style="font-size: 32px;">
+            <div class="fragment burn">
+              <p>
+                <strong><code>ready()</code></strong><br>
+                When a new instance is created. Do setup work here
+              </p>
+            </div>
+            <div class="fragment burn">
+              <p>
+                <strong><code>enteredView()</code></strong><br>
+                When an element is added to the page<br>
+              </p>
+            </div>
+            <div class="fragment burn">
+              <p>
+                <strong><code>leftView()</code></strong><br>
+                When an element is removed from the page<br>
+              </p>
+            </div>
+            <div class="fragment burn">
+              <p>
+                <strong><code>attributeChanged(attrName, oldVal, newVal)</code></strong><br>
+                When one of an element's attributes changes
+              </p>
+            </div>
+          </div>
+        </section>
+
+
+        <section class="demo">
+          <h3>Lifecycle Callbacks</h3>
+          <pre style="font-size: 27px;"><code data-trim data-noescape contenteditable style="margin-top: 20px;">
+<span class="fragment burn" data-fragment-index="1">&lt;polymer-element name="fav-food"&gt;</span>
+  <span class="fragment burn" data-fragment-index="2">&lt;template&gt;
+    &lt;h2&gt;My favorite food is &lt;span id="food"&gt;&lt;/span&gt;&lt;/h2&gt;
+  &lt;/template&gt;</span>
+  <span class="fragment burn" data-fragment-index="3">&lt;script&gt;
+    Polymer('fav-food', {
+      ready: function() {
+        this.$.food.textContent = 'bacon';
+      }
+    });
+  &lt;/script&gt;</span>
+<span class="fragment burn" data-fragment-index="1">&lt;/polymer-element&gt;</span>
+          </code></pre>
+          
+          <polymer-element name="fav-food">
+            <template>
+              <h2>My favorite food is <span id="food"></span></h2>
+            </template>
+            <script>
+              Polymer('fav-food', {
+                ready: function() {
+                  this.$.food.textContent = 'bacon';
+                }
+              });
+            </script>
+          </polymer-element>
+
+          <div class="widget">
+            <fav-food></fav-food>
+          </div>
         </section>
 
 
@@ -896,41 +1060,10 @@
             <!-- disable-events is something I added to kill reveal.js key listeners -->
             <color-picker data-disable-events="true"></color-picker>
           </div>
-
-          <aside class="notes">
-            <strong>!!! DO NOT TYPE ANYTHING !!!</strong>
-          </aside>
         </section>
 
-        <section class="left-align">
-          <h3>Lifecycle Callbacks</h3>
-          <hr>
-          <div style="font-size: 32px;">
-            <div class="fragment burn">
-              <p>
-                <strong><code>ready()</code></strong><br>
-                When a new instance is created. Do setup work here
-              </p>
-            </div>
-            <div class="fragment burn">
-              <p>
-                <strong><code>enteredView()</code></strong><br>
-                When an element is added to the page<br>
-              </p>
-            </div>
-            <div class="fragment burn">
-              <p>
-                <strong><code>leftView()</code></strong><br>
-                When an element is removed from the page<br>
-              </p>
-            </div>
-            <div class="fragment burn">
-              <p>
-                <strong><code>attributeChanged(attrName, oldVal, newVal)</code></strong><br>
-                When one of an element's attributes changes
-              </p>
-            </div>
-          </div>
+        <section>
+          <h1>DEMO!</h1>
         </section>
 
         <section id="mailchimp-demo">
@@ -970,18 +1103,6 @@
 &lt;chart-radar values="[...]"&gt;&lt;/chart-radar&gt;
 &lt;chart-line values="[...]"&gt;&lt;/chart-line&gt;
 &lt;chart-bar values="[...]"&gt;&lt;/chart-bar&gt;
-          </code></pre>
-        </section>
-
-        <section>
-          <h3>Google Analytics</h3>
-          <br>
-          <g-analytics account="UA-44428880-1" domain="localhost"></g-analytics>
-          <pre style="font-size: 30px;"><code data-trim data-noescape contenteditable style="margin-top: 20px;">
-&lt;g-analytics
-  account="UA-44428880-1"
-  domain="localhost"&gt;
-&lt;/g-analytics&gt;
           </code></pre>
         </section>
 
@@ -1121,7 +1242,8 @@
 
         <section>
           <h1 style="margin-top: 150px;"><strong>Thanks!</strong></h1>
-          <h3><a href="http://robdodson.me">Rob Dodson</a> / <a href="http://twitter.com/rob_dodson">@rob_dodson</a></h3>
+          <h4><a href="http://robdodson.me">Rob Dodson</a> / <a href="http://twitter.com/rob_dodson">@rob_dodson</a></h4>
+          <h4><a href="http://somerandomdude.com">P.J. Onori</a> / <a href="http://twitter.com/somerandomdude">@somerandomdude</a></h4>
           <img src="./img/heart2.gif" class="chromeless" width="100px" style="margin-left: 250px;">
         </section>
       </div>
